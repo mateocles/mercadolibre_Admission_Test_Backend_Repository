@@ -1,0 +1,28 @@
+{
+  "name": "mercadolibre_Admission_Test_Backend_Repository",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateocles/mercadolibre_Admission_Test_Backend_Repository.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mateocles/mercadolibre_Admission_Test_Backend_Repository/issues"
+  },
+  "homepage": "https://github.com/mateocles/mercadolibre_Admission_Test_Backend_Repository#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
