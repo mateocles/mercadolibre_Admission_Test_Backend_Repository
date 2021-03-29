@@ -19,7 +19,7 @@ class products {
         free_shipping: item.shipping.free_shipping,
       });
     }
-    return { statusCode: 200, data: { author, categories, items } };
+    return { data: { author, categories, items } };
   }
   static async getIdProducts(id) {
     try {
@@ -30,7 +30,7 @@ class products {
         `https://api.mercadolibre.com/items/${id}/descriptions`
       );
 
-      const product = {
+      let product = {
         id: data.id,
         title: data.title,
         price: data.price,
