@@ -2,14 +2,14 @@
 const { Router } = require("express");
 const axios = require("axios");
 const router = Router();
-const { getSearchProducts, getIdProducts } = require("../../modules/products");
+const { getSearchProducts, getIdProduct } = require("../../modules/products");
 
 router.get("/api/items", async (request, response) => {
   const { data } = await getSearchProducts(request.query.q);
   return response.send(data);
 });
 router.get("/api/items/:id", async (request, response) => {
-  const { data } = await getIdProducts(request.params.id);
+  const { data } = await getIdProduct(request.params.id);
   return response.send(data);
 });
 

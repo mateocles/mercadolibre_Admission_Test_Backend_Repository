@@ -21,7 +21,7 @@ class products {
     }
     return { data: { author, categories, items } };
   }
-  static async getIdProducts(id) {
+  static async getIdProduct(id) {
     try {
       const { data } = await axios.get(
         `https://api.mercadolibre.com/items/${id}`
