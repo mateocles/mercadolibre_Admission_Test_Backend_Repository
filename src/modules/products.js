@@ -30,6 +30,7 @@ class products {
           picture: item.thumbnail,
           condition: item.condition,
           free_shipping: item.shipping?.free_shipping,
+          address:item.address?.state_name
         });
       }
       return { data: { author, categories, items } };
