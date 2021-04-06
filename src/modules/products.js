@@ -9,21 +9,27 @@ class products {
       );
       const items = [];
       const author = { name: "mateo", lastname: "ceballos" };
-      const categories = []
-      const categoryFilters = data.filters.find(filter => filter.id === 'category')
+      const categories = [];
+      const categoryFilters = data.filters.find(
+        (filter) => filter.id === "category"
+      );
       if (categoryFilters) {
         for (const filter of categoryFilters.values) {
-          categories.push(filter.name)
+          categories.push(filter.name);
         }
       }
       for (const item of data.results) {
         items.push({
           id: item.id,
           title: item.title,
-          price: { currency: item.prices.prices[0].currency_id, amount: item.prices.prices[0].amount, decimals: item.prices.prices[0].amount % 1 },
+          price: {
+            currency: item.prices.prices[0].currency_id,
+            amount: item.prices.prices[0].amount,
+            decimals: item.prices.prices[0].amount % 1,
+          },
           picture: item.thumbnail,
           condition: item.condition,
-          free_shipping: item.shipping.free_shipping,
+          free_shipping: item.shipping?.free_shipping,
         });
       }
       return { data: { author, categories, items } };
